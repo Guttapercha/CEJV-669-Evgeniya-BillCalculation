@@ -14,13 +14,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btn_pressed(View v) {
-        EditText n1 = findViewById(R.id.diners);
-        EditText n2 = findViewById(R.id.price);
-        EditText result = findViewById(R.id.number_result);
-        int addition;
-        addition = Integer.parseInt(n1.getText().toString()) + Integer.parseInt(n2.getText().toString());
+        //data input
+        EditText diners = findViewById(R.id.diners);
+        EditText price = findViewById(R.id.price);
+        EditText tip = findViewById(R.id.tip);
 
-        result.setText(String.valueOf(addition));
+        //data output
+        EditText totalPerPerson = findViewById(R.id.lbl_totalPerPerson);
+        EditText GST = findViewById(R.id.lbl_GST);
+        EditText QST = findViewById(R.id.lbl_QST);
+        EditText tips = findViewById(R.id.lbl_tip);
+        EditText result = findViewById(R.id.result);
 
+        totalPerPerson.setText(String.valueOf(Double.parseDouble(price.getText().toString())*
+                (1 + 0.05 + 0.0975 + Double.parseDouble(tip.getText().toString())/100)));
+        GST.setText(String.valueOf(Double.parseDouble(price.getText().toString())*0.05));
+        QST.setText(String.valueOf(Double.parseDouble(price.getText().toString())*0.0975));
+        tips.setText(String.valueOf(Double.parseDouble(price.getText().toString())*
+                (Double.parseDouble(tip.getText().toString())/100)));
+        result.setText(String.valueOf(Double.parseDouble(totalPerPerson.getText().toString())*Integer.parseInt(diners.getText().toString())));
     }
 }
