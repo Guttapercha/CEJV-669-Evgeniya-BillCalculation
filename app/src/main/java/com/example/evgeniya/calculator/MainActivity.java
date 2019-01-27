@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         totalPerPerson.setText(String.valueOf(Double.parseDouble(price.getText().toString())*
                 (1 + 0.05 + 0.0975 + Double.parseDouble(tip.getText().toString())/100)));
         GST.setText(String.valueOf(Double.parseDouble(price.getText().toString())*0.05));
-        QST.setText(String.valueOf(Double.parseDouble(price.getText().toString())*0.0975));
+        QST.setText(String.valueOf(Double.parseDouble(price.getText().toString())*0.09975));
         tips.setText(String.valueOf(Double.parseDouble(price.getText().toString())*
                 (Double.parseDouble(tip.getText().toString())/100)));
         result.setText(String.valueOf(Double.parseDouble(totalPerPerson.getText().toString())*Integer.parseInt(diners.getText().toString())));

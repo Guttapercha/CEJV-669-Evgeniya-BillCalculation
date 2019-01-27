@@ -177,46 +177,47 @@
     <EditText
         android:id="@+id/lbl_totalPerPerson"
         android:layout_width="107dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="38dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="330dp" />
 
     <EditText
         android:id="@+id/lbl_GST"
         android:layout_width="105dp"
-        android:layout_height="28dp"
+        android:layout_height="33dp"
         android:layout_marginStart="108dp"
         android:layout_marginLeft="108dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/lbl_totalPerPerson" />
 
     <EditText
         android:id="@+id/lbl_QST"
         android:layout_width="104dp"
-        android:layout_height="26dp"
+        android:layout_height="33dp"
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/lbl_GST" />
 
     <EditText
         android:id="@+id/lbl_tip"
         android:layout_width="106dp"
-        android:layout_height="28dp"
+        android:layout_height="34dp"
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
         android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/lbl_QST" />
 
