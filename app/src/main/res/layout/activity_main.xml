@@ -178,11 +178,14 @@
         android:id="@+id/lbl_totalPerPerson"
         android:layout_width="107dp"
         android:layout_height="38dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="206dp"
-        tools:layout_editor_absoluteY="330dp" />
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/lbl_GST"
