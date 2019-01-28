@@ -14,7 +14,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,17 +26,17 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="numberSigned"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diners" />
 
     <Button
         android:id="@+id/btn_add"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
-        android:layout_marginLeft="125dp"
-        android:layout_marginTop="22dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="20dp"
         android:onClick="btn_pressed"
         android:text="calculate"
         android:textSize="18sp"
@@ -158,6 +158,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="40dp"
+        android:onClick="btn_pressed_clear"
         android:text="Clear"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -177,50 +178,60 @@
     <EditText
         android:id="@+id/lbl_totalPerPerson"
         android:layout_width="107dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:lineSpacingExtra="14sp"
+        android:singleLine="false"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_GST"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <EditText
         android:id="@+id/lbl_GST"
         android:layout_width="105dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:lineSpacingExtra="14sp"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_QST"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/lbl_totalPerPerson" />
 
     <EditText
         android:id="@+id/lbl_QST"
         android:layout_width="104dp"
-        android:layout_height="33dp"
+        android:layout_height="35dp"
         android:layout_marginStart="84dp"
         android:layout_marginLeft="84dp"
+        android:layout_marginBottom="1dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:lineSpacingExtra="14sp"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/lbl_tip"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/lbl_GST" />
 
     <EditText
         android:id="@+id/lbl_tip"
         android:layout_width="106dp"
-        android:layout_height="34dp"
+        android:layout_height="35dp"
         android:layout_marginStart="128dp"
         android:layout_marginLeft="128dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginBottom="31dp"
         android:ems="10"
         android:inputType="numberDecimal"
+        android:lineSpacingExtra="14sp"
         android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/lbl_QST" />
 
@@ -235,5 +246,16 @@
         android:inputType="numberDecimal"
         app:layout_constraintStart_toEndOf="@+id/btn_clear"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/lbl_error"
+        android:layout_width="219dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
